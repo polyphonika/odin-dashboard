@@ -1,6 +1,83 @@
+/* imports */
+
+.roboto-thin {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .roboto-thin-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  .roboto-light {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .roboto-light-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .roboto-regular-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .roboto-medium {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .roboto-medium-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .roboto-bold-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  .roboto-black {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .roboto-black-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+  }
+  
+
 /* inheritable globals go here: fonts, colours - note that margin, padding and box sizing can't be inherited hence going above */
 :root {    
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     }
 
 *, *::before, *::after {
@@ -19,20 +96,37 @@ html {
  /* Remove default margin in favour of better control in authored CSS  - basically no margin bottom*/
 h1, h2, h3, h4, p,
   figure, blockquote, dl, dd {
-    margin-block-end: 0;
+    /* margin-block-end: 0; */
+    margin: 0;    
+    padding: 0;
   }
 
   /* Set core body defaults */
 body {
     margin: 0; /* not inheritable, just gets rid of the small default 8px margin surrounding the page */
     min-height: 100vh;
-    line-height: 1.5; 
+    line-height: 1.6; 
   }
   
   /* Set shorter line heights on headings and interactive elements */
   h1, h2, h3, h4,
   button, input, label {
     line-height: 1.1;
+  }
+
+  /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+    ul[role='list'],
+    ol[role='list'] {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+}
+
+/* A elements that don't have a class get default styles */
+    a:not([class]) {
+        text-decoration-skip-ink: auto;
+        color: currentColor;
+        text-decoration: none;
   }
 
   /* ------ RESETS DONE ------- */
@@ -69,5 +163,62 @@ body {
     /* grid-row: 2 / 3 ; */
     background-color: var(--main-color-bg);
   }
+
+
+/* logo and SVGs */
+
+.logo,
+.sidebar-item a {
+    display: grid;
+    grid-template-columns: 3rem 3fr;
+    align-items: center;
+    color: white;
+    gap: 0.6rem;
+    padding: 0.6rem;
+    fill: white;
+
+
+    & > h1 {
+        grid-column: 2;
+        justify-content: start;
+        align-self: center;
+        font-size: 1rem;
+    }    
+    
+    /* &::before {
+        content: url('/images/svg/view-dashboard.svg');
+        display: block;
+        width: 2rem; 
+        height: 2rem;
+        /* background-image: url(/images/svg/view-dashboard.svg); */
+        /*background-size: contain;
+        background-repeat: no-repeat;        
+        grid-column: 1;
+        align-self: center;
+        justify-self: center; 
+        fill: white;
+        color: white;*/
+        /* justify-self: center; Center the icon horizontally in its column */
+    } 
+
+nav ul[role='list'] {
+    margin-block-start: 1rem;
+}
+
+    .sidebar-item a {
+    grid-template-columns: 3rem auto;
+    padding-bottom: 0.4;
+    padding-top: 0;
+    
+    & > svg {
+        width: 1.2rem;
+        justify-self: center;
+    }
+
+
+}
+
+
+
 
   
