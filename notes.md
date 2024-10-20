@@ -10,7 +10,8 @@ Will have sub grids in sidebar, header and main.
 - [x] Get font details, build rules
 - [x] Get SVGs, build rules
 - [x] Get reset rules for LIs from gist
-
+- [ ] Build header bar in HTML
+- [ ] Apply basic styling to header
 
 
 ### Notes
@@ -25,3 +26,5 @@ Will have sub grids in sidebar, header and main.
 - Summarise all Powell rules
 - SVGs and fill colours
 - Lots to summarise from recent learnings
+- Line height can trip you up, as well as default margins
+- When you align center a field in grid, it does not stretch by default

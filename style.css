@@ -136,7 +136,7 @@ body {
   :root {
     --sidebar-color-bg: #1992D4;
     --header-color-bg: green;
-    --main-color-bg: rgb(241, 236, 166);
+    --main-color-bg: #E2E8F0;
   }
 
   /* Project styling */
@@ -156,12 +156,14 @@ body {
 
   header {
     /* grid-column: 2 / 3; */
-    background-color: var(--header-color-bg);    
+    background-color: var(--header-color-bg);
+    height: 8rem;    
   } 
 
   main {
     /* grid-row: 2 / 3 ; */
-    background-color: var(--main-color-bg);
+    /* background-color: var(--main-color-bg); */
+    background-color: white;
   }
 
 
@@ -214,9 +216,128 @@ nav ul[role='list'] {
         width: 1.2rem;
         justify-self: center;
     }
-
-
 }
+
+/* Header bar */
+
+header {
+    /* height: 9rem; */
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 2rem 1fr;
+
+    /* align-items: end; */
+
+    position: relative;    
+    padding: 1rem;
+
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow only on bottom */
+
+
+    & svg {
+        height: 1rem;
+        width: 1rem;
+    }
+
+    & img {
+        background-color: #FACC15;
+        border-radius: 50%;
+        padding: 0.2rem;
+    }
+    
+    & .header-search {
+        display: grid;
+        grid-template-columns: 2rem 1fr;
+        padding: 0;
+        height: 100%;
+
+        & label {
+            /* display: block; */
+            /* width: 1rem; */
+            /* height: 1rem; */
+            justify-self: center;
+            align-self: center;
+
+        }
+
+        & input {
+            /* min-width: 100%; */
+            border-radius: 1.5rem;
+            border: 0;
+            /* height: 1.4rem; */
+            background-color: #E2E8F0;
+            align-self:stretch;
+            height: 100%;
+            width: 100%;
+            padding: 0;
+            min-height: 100%;
+        }
+    }
+
+    & .area-profile {
+        display:grid;
+        grid-template-columns: auto 1.5rem auto;
+        justify-content: end;
+        align-items: center;
+        /* align-items: stretch; */
+        gap: 2rem;
+        /* height: 100%; */
+                
+        & > img {
+            /* height: 100%; */
+            max-height: 2rem;
+            width: auto;
+
+            /* object-fit: cover;             */
+            /* align-self: stretch; */
+        }
+
+        & > * {
+            font-weight: bold;
+        }
+
+    }
+
+    & .area-profile-welcome {
+        display: grid;
+        grid-template-columns: 3rem auto;
+        align-items: center;
+        align-self: end;
+        gap: 1rem;
+        font-weight: bold;
+
+        & > img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        & :first-child {
+            font-size: 0.8rem;
+        }
+        
+    }
+
+    & .header-buttons {
+        justify-self: end;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        align-items: end;
+
+        & button {
+        background-color:#1992D4;
+        border: none;
+        border-radius: 1rem;
+        padding: 0.5rem 1.5rem;
+        color: white;
+        font: "Roboto", sans-serif;font-weight: bold;
+        }
+    }
+
+            
+}
+
 
 
 
