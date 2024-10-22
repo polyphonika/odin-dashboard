@@ -12,7 +12,9 @@ Will have sub grids in sidebar, header and main.
 - [x] Get reset rules for LIs from gist
 - [x] Build header bar in HTML
 - [x] Apply basic styling to header
-- [ ] Plan cards and general content section
+- [x] Plan cards and general content section
+- - [x] Check happy with grid then move to card styling
+
 
 
 ### Notes
@@ -24,9 +26,16 @@ Will have sub grids in sidebar, header and main.
 - Use utility classes where possible
 - Use Powell container sizes, rems etc
 - Use Powell resets
-- Summarise all Powell rules
+- Summarise all Powell rulese
 - SVGs and fill colours
 - Lots to summarise from recent learnings
 - Line height can trip you up, as well as default margins
 - When you align center a field in grid, it does not stretch by default
 - Watch Kevin Powell again for ideas and improving your skills, general resets, approach
+- Be careful with your nesting, not too deep. Too complicated and confusing if not.
+
+
+For Tuesday:
+- Do not make responsive. That's for future skills.
+- Watch part of Kevin Powell responsive Astro homepage again, the different blocks.
+- Add bells/whistles on hover.
